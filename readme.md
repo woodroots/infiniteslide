@@ -1,11 +1,11 @@
 # jQuery infiniteSlide Plugin
 
-‰¡•ûŒü‚É–³ŒÀ‚ÉƒXƒNƒ[ƒ‹‚·‚éƒvƒ‰ƒOƒCƒ“‚Å‚·B‹É‚ß‚ÄƒVƒ“ƒvƒ‹B
+æ¨ªæ–¹å‘ã«ç„¡é™ã«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã™ã‚‹ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã§ã™ã€‚æ¥µã‚ã¦ã‚·ãƒ³ãƒ—ãƒ«ã€‚
 
-## ƒfƒ‚
+## ãƒ‡ãƒ¢
 <http://wood-roots.com/sample/infiniteslide/>
 
-## g‚¢•û
+## ä½¿ã„æ–¹
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 	<script src="infiniteslide.js"></script>
@@ -13,14 +13,14 @@
 	<script type="text/javascript">
 		$(function(){
 			$('.infiniteslide1').infiniteslide({
-				'height': 400, //‚‚³
-				'speed': 30, //‘¬‚³
-				'direction' : 'left' //Œü‚«
+				'height': 400, //é«˜ã•
+				'speed': 30, //é€Ÿã•
+				'direction' : 'left' //å‘ã
 			});
 		});
 	</script>
 
-	<!-- “r’†—ª -->
+	<!-- é€”ä¸­ç•¥ -->
 
 	<div class="infiniteslide1">
 		<ul>
@@ -32,10 +32,10 @@
 	</div>
 
 
-## ƒIƒvƒVƒ‡ƒ“
-ƒIƒvƒVƒ‡ƒ“‚Í3í—Ş‚Ì‚İ‚Å‚·B
+## ã‚ªãƒ—ã‚·ãƒ§ãƒ³
+ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¯3ç¨®é¡ã®ã¿ã§ã™ã€‚
 
-+   `height` : ‚‚³
-+   `speed` : ‘¬‚³
-+   `direction` : Œü‚«i'left'‚©'right'‚Ì‚İ‰Â”\j
++   `height` : é«˜ã•
++   `speed` : é€Ÿã•
++   `direction` : å‘ãï¼ˆ'left'ã‹'right'ã®ã¿å¯èƒ½ï¼‰
 
