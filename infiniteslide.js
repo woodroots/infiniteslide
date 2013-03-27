@@ -1,3 +1,12 @@
+/*
+jQuery infiniteSlide Plugin
+version: 1.0
+Author: T.Morimoto
+
+https://github.com/woodroots/infiniteslide
+http://wood-roots.com/?p=514
+*/
+
 (function($){
 
 $.fn.infiniteslide = function(options) {
