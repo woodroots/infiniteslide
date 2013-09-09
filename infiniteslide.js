@@ -1,6 +1,6 @@
 /*
 jQuery infiniteSlide Plugin
-version: 1.0
+version: 1.1
 Author: T.Morimoto
 
 https://github.com/woodroots/infiniteslide
@@ -15,8 +15,9 @@ $.fn.infiniteslide = function(options) {
 var settings = $.extend( {
 		'height': 400, //高さ
 		'speed': 30, //速さ
-		'direction' : 'left' //向き
-	}, options);
+		'direction' : 'left', //向き
+		'pauseonhover': true //マウスオーバーでストップ
+		}, options);
 
 //開始時のフェードインとプリロード
 var opening = function(obj){
@@ -55,6 +56,7 @@ var opening = function(obj){
 	});
 	
 	d.resolve();
+
 	return d.promise();
 }
 
@@ -64,6 +66,11 @@ var slide = function(obj){
 	var ul = obj.children('ul');
 	
 	//leftかrightかで方向を変えてアニメーション
+	//ロード時のみ必要
+	if(settings.direction == 'right'){
+		ul.css('left',-1*ul.width()/2 + 'px');
+	}
+	
 	var anim = function(){
 		if(settings.direction == 'left'){
 			ul.animate({
@@ -73,11 +80,20 @@ var slide = function(obj){
 				anim();
 			});
 		} else if(settings.direction == 'right'){
-			ul.css('left',-1*ul.width()/2 + 'px').animate({
+			ul.animate({
 				left: '0px'
 				},ul.width()/2*settings.speed,'linear',function(){
 				ul.css('left',-1*ul.width()/2 + 'px');
 				anim();
+			});
+		}
+		
+		//マウスオーバーで停止
+		if(settings.pauseonhover){
+			ul.on('mouseenter',function(){
+				$(this).pause();
+			}).on('mouseleave',function(){
+				$(this).resume();
 			});
 		}
 	}
@@ -85,7 +101,7 @@ var slide = function(obj){
 	//すべての画像が読み込み終わってからアニメーションスタート（いらないかも・・・）
 	var delay = ul.children().size() * 210;
 	setTimeout(function(){anim();},delay);
-	
+
 	return d.promise();
 }
 

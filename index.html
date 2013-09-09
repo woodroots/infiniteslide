@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +5,11 @@
 <title>Infinite Slide jQuery Plugin</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="infiniteslide.js"></script>
+
+<!-- pause on hoverのために
+http://tobia.github.io/Pause/
+-->
+<script src="jquery.pause.min.js"></script>
 
 <style type="text/css">
 	/* 最低限必要なリセット */
@@ -40,14 +44,22 @@
 基本的な書式は以下のようになります。<br />
 divの中にul>li>imgを入れてください。
 	</p>
+	
+	<p>
+	<strong>更新情報</strong><br />
+2013.09.09　<a href="http://tobia.github.io/Pause/" target="_blank">jQuery Pauseプラグイン</a>を使用してmouse on hoverオプションを追加しました。
+	</p>
+	
 	<p><a href="infiniteslide.zip">サンプルとソースをダウンロード</a></p>
+	<p><a href="http://wood-roots.com/web%E5%88%B6%E4%BD%9C/jqueryjavascript/%E7%84%A1%E9%99%90%E3%81%AB%E6%A8%AA%E6%96%B9%E5%90%91%E3%81%AB%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8Bjquery%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3" target="_blank">ブログエントリはこちら</a></p>
 	<pre>
 	<strong>Javascript</strong><br />
 	$(function(){
 		$('.infiniteslide1').infiniteslide({
 			'height': 400, //高さ
 			'speed': 30, //速さ
-			'direction' : 'left' //向き
+			'direction' : 'left', //向き
+			'pauseonhover': true //マウスオーバーでストップ
 		});
 	});
 	</pre>
@@ -55,6 +67,7 @@ divの中にul>li>imgを入れてください。
 	<strong>HTML</strong>
 	&lt;script&nbsp;src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js&quot;&gt;&lt;/script&gt;
 	&lt;script&nbsp;src=&quot;infiniteslide.js&quot;&gt;&lt;/script&gt;
+	&lt;script&nbsp;src=&quot;jquery.pause.min.js&quot;&gt;&lt;/script&gt;
 
 	&lt;div&nbsp;class=&quot;infiniteslide1&quot;&gt;
 		&lt;ul&gt;
@@ -104,7 +117,7 @@ divの中にul>li>imgを入れてください。
 	$(function(){
 		$('.infiniteslide2').infiniteslide({
 			height: 150,
-			direction: 'right'
+			direction: 'right',
 		});
 	});
 </pre>
@@ -147,155 +160,3 @@ divの中にul>li>imgを入れてください。
 </html>
 
 
-
-=======
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title>Infinite Slide jQuery Plugin</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script src="infiniteslide.js"></script>
-
-<style type="text/css">
-	/* 最低限必要なリセット */
-	ul,li {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	/* 見栄えを整えるためなので別にいらない */
-	h2 {
-		font-size: 16px;
-		background: #FF6060;
-		color: #fff;
-		padding: 10px;
-		margin-top: 100px;
-	}
-	pre {
-		border: 1px solid #ccc;
-		background: #eee;
-		padding: 10px;
-	}
-</style>
-
-</head>
-
-<body>
-<div class="readtext">
-	<h1>無限スクロールするアニメーション「infiniteslide.js」サンプル</h1>
-	<p>
-	横方向に無限にスクロールし続けるアニメーションを実装するjqueryプラグインです。<br />
-基本的な書式は以下のようになります。<br />
-divの中にul>li>imgを入れてください。
-	</p>
-	<p><a href="infiniteslide.zip">サンプルとソースをダウンロード</a></p>
-	<pre>
-	<strong>Javascript</strong><br />
-	$(function(){
-		$('.infiniteslide1').infiniteslide({
-			'height': 400, //高さ
-			'speed': 30, //速さ
-			'direction' : 'left' //向き
-		});
-	});
-	</pre>
-	<pre>
-	<strong>HTML</strong>
-	&lt;script&nbsp;src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js&quot;&gt;&lt;/script&gt;
-	&lt;script&nbsp;src=&quot;infiniteslide.js&quot;&gt;&lt;/script&gt;
-
-	&lt;div&nbsp;class=&quot;infiniteslide1&quot;&gt;
-		&lt;ul&gt;
-			&lt;li&gt;&lt;img&nbsp;src=&quot;img/1.jpg&quot;&nbsp;alt=&quot;&quot;&nbsp;/&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img&nbsp;src=&quot;img/2.jpg&quot;&nbsp;alt=&quot;&quot;&nbsp;/&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img&nbsp;src=&quot;img/3.jpg&quot;&nbsp;alt=&quot;&quot;&nbsp;/&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img&nbsp;src=&quot;img/4.jpg&quot;&nbsp;alt=&quot;&quot;&nbsp;/&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-
-	</pre>
-
-</div>
-
-<h2>オプションなし</h2>
-<script type="text/javascript">
-	$(function(){
-		$('.infiniteslide1').infiniteslide();
-	});
-</script>
-
-<pre>
-	$(function(){
-		$('.infiniteslide1').infiniteslide();
-	});
-</pre>
-<div class="infiniteslide1">
-	<ul>
-		<li><img src="img/1.jpg" alt="" /></li>
-		<li><img src="img/2.jpg" alt="" /></li>
-		<li><img src="img/3.jpg" alt="" /></li>
-		<li><img src="img/4.jpg" alt="" /></li>
-	</ul>
-</div>
-
-
-<h2>高さ150にして右向きオプション</h2>
-<script type="text/javascript">
-	$(function(){
-		$('.infiniteslide2').infiniteslide({
-			height: 150,
-			direction: 'right'
-		});
-	});
-</script>
-<pre>
-	$(function(){
-		$('.infiniteslide2').infiniteslide({
-			height: 150,
-			direction: 'right'
-		});
-	});
-</pre>
-<div class="infiniteslide2">
-	<ul>
-		<li><img src="img/1.jpg" alt="" /></li>
-		<li><img src="img/2.jpg" alt="" /></li>
-		<li><img src="img/3.jpg" alt="" /></li>
-		<li><img src="img/4.jpg" alt="" /></li>
-	</ul>
-</div>
-
-<h2>幅を400にして速度5（小さいほど速い）</h2>
-<script type="text/javascript">
-	$(function(){
-		$('.infiniteslide3').infiniteslide({
-			height: 300,
-			speed: 5
-		});
-	});
-</script>
-<pre>
-	$(function(){
-		$('.infiniteslide3').infiniteslide({
-			height: 300,
-			speed: 5
-		});
-	});
-</pre>
-<div class="infiniteslide3" style="width: 400px; margin: 0 auto; position: relative;">
-	<ul>
-		<li><img src="img/1.jpg" alt="" /></li>
-		<li><img src="img/2.jpg" alt="" /></li>
-	</ul>
-</div>
-
-
-
-</body>
-</html>
-
-
-
->>>>>>> 70dcea795cd544f612b4e9c3b654cfbd4143904f
