@@ -15,7 +15,8 @@
 			$('.infiniteslide1').infiniteslide({
 				'height': 400, //高さ
 				'speed': 30, //速さ
-				'direction' : 'left' //向き
+				'direction' : 'left', //向き
+				'pauseonhover': true //マウスオーバーでストップ
 			});
 		});
 	</script>
@@ -33,9 +34,14 @@
 
 
 ## オプション
-オプションは3種類のみです。
+オプションは4種類のみです。
 
 +   `height` : 高さ
 +   `speed` : 速さ
 +   `direction` : 向き（'left'か'right'のみ可能）
++   `pauseonhover` : マウスオーバーでアニメーションをストップする（true/false)
 
+
+## 更新情報
+2013.09.09　jQuery pauseプラグインを使ったマウスオーバーによるストップを追加
+<http://tobia.github.io/Pause/>
