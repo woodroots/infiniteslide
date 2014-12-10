@@ -3,6 +3,10 @@ jQuery infiniteSlide Plugin
 version: 1.1
 Author: T.Morimoto
 
+Copyright 2013, Dev7studios
+* Free to use and abuse under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+
 https://github.com/woodroots/infiniteslide
 http://wood-roots.com/?p=514
 */
