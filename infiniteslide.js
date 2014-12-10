@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 jQuery infiniteSlide Plugin
 version: 1.1
