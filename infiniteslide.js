@@ -102,8 +102,8 @@ var slide = function(obj){
 		}
 	}
 	
-	//すべての画像が読み込み終わってからアニメーションスタート（いらないかも・・・）
-	var delay = ul.children().size() * 210;
+	//すべての画像が読み込み終わってからアニメーションスタート
+	var delay = ul.children().length * 1000;
 	setTimeout(function(){anim();},delay);
 
 	return d.promise();
