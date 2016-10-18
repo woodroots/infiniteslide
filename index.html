@@ -84,13 +84,13 @@ divの中にul>li>imgを入れてください。
 
 <h2>オプションなし</h2>
 <script type="text/javascript">
-	$(function(){
-		$('.infiniteslide1').infiniteslide();
-	});
+	$(window).on('load', function(){
+    $('.infiniteslide1').infiniteslide();
+});
 </script>
 
 <pre>
-	$(function(){
+	$(window).on('load', function(){
 		$('.infiniteslide1').infiniteslide();
 	});
 </pre>
@@ -106,7 +106,7 @@ divの中にul>li>imgを入れてください。
 
 <h2>高さ150にして右向きオプション</h2>
 <script type="text/javascript">
-	$(function(){
+	$(window).on('load', function(){
 		$('.infiniteslide2').infiniteslide({
 			height: 150,
 			direction: 'right'
@@ -114,7 +114,7 @@ divの中にul>li>imgを入れてください。
 	});
 </script>
 <pre>
-	$(function(){
+	$(window).on('load', function(){
 		$('.infiniteslide2').infiniteslide({
 			height: 150,
 			direction: 'right',
@@ -132,7 +132,7 @@ divの中にul>li>imgを入れてください。
 
 <h2>幅を400にして速度5（小さいほど速い）</h2>
 <script type="text/javascript">
-	$(function(){
+	$(window).on('load', function(){
 		$('.infiniteslide3').infiniteslide({
 			height: 300,
 			speed: 5
@@ -140,7 +140,7 @@ divの中にul>li>imgを入れてください。
 	});
 </script>
 <pre>
-	$(function(){
+	$(window).on('load', function(){
 		$('.infiniteslide3').infiniteslide({
 			height: 300,
 			speed: 5
